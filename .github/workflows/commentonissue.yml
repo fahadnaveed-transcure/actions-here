@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "dump github actions"
-        run: echo '${{toJSON(github.event)}}' | jq
-        run: echo '${{toJSON(github.event)}}'
+        run: echo '${{toJSON(github.event)}}' | jq && echo '${{toJSON(github.event)}}'
+        #run: echo '${{toJSON(github.event)}}'
         shell: bash
 
 
