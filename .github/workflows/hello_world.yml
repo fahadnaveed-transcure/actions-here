@@ -1,0 +1,28 @@
+name: Hello_world Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  worlflow__dispatch:   #this gives u a button to run your workflow from end UI without push event
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: hello world
+        run: echo "hellow world"
+
+        shell: bash
+
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: goodbye
+        run: echo "goodbye"
+        shell: bash
+
