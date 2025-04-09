@@ -7,6 +7,8 @@ jobs:
   comment_with_actions:
     runs-on: ubuntu-latest
     steps:
+      - name: checkoutenv
+      - uses: actions/checkout@v4 
       - name: "dump github actions"
         run: echo '${{toJSON(github.event)}}' | jq && echo '${{toJSON(github.event)}}'
         #run: echo '${{toJSON(github.event)}}'
