@@ -1,7 +1,7 @@
 name: comment on issues created
 on:
   issues:
-    types: [opened, updated]
+    types: [opened, edited, reopened ]
 
 jobs:
   comment_with_actions:
