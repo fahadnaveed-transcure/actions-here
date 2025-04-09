@@ -6,7 +6,7 @@ on:
   pull_request:
     branches:
       - main
-  worlflow_dispatch:   #this gives u a button to run your workflow from end UI without push event
+  workflow_dispatch:   #this gives u a button to run your workflow from end UI without push event
 
 jobs:
   hello:
