@@ -30,7 +30,7 @@ jobs:
               #reactions: '+1'  
           
           
-  commentwithapi:
+  commentapi:
     runs-on: ubuntu-latest
     steps:
         - name: comment with API
