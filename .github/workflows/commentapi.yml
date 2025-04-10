@@ -16,9 +16,10 @@ jobs:
             run: echo '${{toJSON(github.event)}}' | jq && echo '${{toJSON(github.event)}}'
             #run: echo '${{toJSON(github.event)}}'
             shell: bash
-    commentapi:
-        runs-on: ubuntu-latest
-        steps:
+    #commentapi:
+        #runs-on: ubuntu-latest
+        #steps:
+            commentapi:
             - name: comment with API
               run: |
                 gh api -X POST \
