@@ -6,19 +6,19 @@ on:
 
 jobs:
     commentapi:
-    runs-on: ubuntu-latest
-    steps:
-        - name: comment with API
-          run: |
-            gh api -X POST \
-            https://api.github.com/repo/${ORGANISATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
-            -f body='
-            Comments but from API not from actions'
-            
-          env:
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-            ORGANISATOIN: ${{github.event.organisation.login}}
-            REPOSITORY: ${{github.event.repository.name}}
-            ISSUE_NUMBER: ${{github.event.issue.number}}
+        runs-on: ubuntu-latest
+        steps:
+            - name: comment with API
+              run: |
+                gh api -X POST \
+                https://api.github.com/repo/${ORGANISATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
+                -f body='
+                Comments but from API not from actions'
+                
+              env:
+                GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+                ORGANISATOIN: ${{github.event.organisation.login}}
+                REPOSITORY: ${{github.event.repository.name}}
+                ISSUE_NUMBER: ${{github.event.issue.number}}
             
             
