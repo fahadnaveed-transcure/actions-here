@@ -8,7 +8,7 @@ jobs:
     commentstest:
         runs-on: ubuntu-latest
         steps:
-            testcomment:
+            #testcomment:
           #- name: checkoutenv
           #- uses: actions/checkout@v4
 
@@ -19,7 +19,7 @@ jobs:
     #commentapi:
         #runs-on: ubuntu-latest
         #steps:
-            commentapi:
+            #commentapi:
             - name: comment with API
               run: |
                 gh api -X POST \
