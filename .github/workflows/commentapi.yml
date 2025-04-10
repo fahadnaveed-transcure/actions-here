@@ -8,9 +8,6 @@ jobs:
     commentstest:
         runs-on: ubuntu-latest
         steps:
-            #testcomment:
-          #- name: checkoutenv
-          #- uses: actions/checkout@v4
           - name: "dump github actions"
             run: echo '${{toJSON(github.event)}}' | jq && echo '${{toJSON(github.event)}}'
             #run: echo '${{toJSON(github.event)}}'
